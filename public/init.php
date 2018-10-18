@@ -11,12 +11,12 @@ $smarty_obj->setTemplateDir(__DIR__.'/../templates/');
 $smarty_obj->setCompileDir(__DIR__.'/../templates_c/');
 
 
-
+//トークンを生成
 function generate_token()
 {
     return hash('sha256', session_id());
 }
-
+//トークンのチェック
 function token_check($token_post){
 	$token = generate_token();
 	if($token == $token_post){
@@ -25,6 +25,7 @@ function token_check($token_post){
 	return false;
 }
 
+//ログインのチェック
 function login_check(){
 	if(isset($_SESSION['username'])){
                 return true;
@@ -33,6 +34,7 @@ function login_check(){
         }
 }
 
+//navバーのlistを生成
 function list_array(){
 	$link = array("add.php", "user_detail.php", "follow_up_list.php", "bookmark_list.php");
 	$text = array("スポット登録", "ユーザー情報", "フォロー一覧", "お気に入り一覧");

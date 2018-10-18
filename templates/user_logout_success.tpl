@@ -23,22 +23,22 @@
 <div class="row">
         <div class="col-md-2">
                 <nav class="nav flex-column">
-                        <a class="nav-link active" href="index.php">ホーム</a>
-			{foreach from=$list_text item=li}
-                                <a class="nav-link" href="{$li["link"]}">{$li["text"]}</a>
-                        {/foreach}
-                        <a class="nav-link" href="{$login_list['link']}">{$login_list['text']}</a>
-		</nav>
+                	<a class="nav-link active" href="index.php">ホーム</a>
+					{foreach from=$list_text item=li}
+                    	<a class="nav-link" href="{$li["link"]}">{$li["text"]}</a>
+                    {/foreach}
+                    <a class="nav-link" href="{$login_list['link']}">{$login_list['text']}</a>
+				</nav>
         </div>
         <div class="col-md-10">
                 <div class="row">
-			<div class="col-md-10">
-				<div class="alert alert-info" role="alert" id="logout">
-    					<strong>ログアウトしました。</strong>
+					<div class="col-md-10">
+						<div class="alert alert-info" role="alert" id="logout">
+    						<strong>ログアウトしました。</strong>
+						</div>
+					</div>
 				</div>
-			</div>
 		</div>
-	</div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

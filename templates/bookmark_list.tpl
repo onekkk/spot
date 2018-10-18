@@ -20,11 +20,11 @@
 <div class="row" id="container">
         <div class="col-md-2">
                 <nav class="nav flex-column">
-                        <a class="nav-link active" href="index.php">ホーム</a>
+                    <a class="nav-link active" href="index.php">ホーム</a>
                 	{foreach from=$list_text item=li}
-                                <a class="nav-link" href="{$li["link"]}">{$li["text"]}</a>
-                        {/foreach}
-                        <a class="nav-link" href="{$login_list['link']}">{$login_list['text']}</a>
+                    	<a class="nav-link" href="{$li["link"]}">{$li["text"]}</a>
+                    {/foreach}
+                    <a class="nav-link" href="{$login_list['link']}">{$login_list['text']}</a>
 		</nav>
         </div>
         <div class="col-md-10">

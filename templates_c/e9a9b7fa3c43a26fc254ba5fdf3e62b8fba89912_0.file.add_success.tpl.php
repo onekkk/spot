@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-10-09 00:09:33
+/* Smarty version 3.1.32, created on 2018-10-18 17:04:26
   from '/var/www/html/items_s/templates/add_success.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bbb732d6b28d7_20552080',
+  'unifunc' => 'content_5bc83e8a944ab0_38475260',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e9a9b7fa3c43a26fc254ba5fdf3e62b8fba89912' => 
     array (
       0 => '/var/www/html/items_s/templates/add_success.tpl',
-      1 => 1534500487,
+      1 => 1539014408,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bbb732d6b28d7_20552080 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bc83e8a944ab0_38475260 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE>
 
 <html>
@@ -38,7 +38,7 @@ function content_5bbb732d6b28d7_20552080 (Smarty_Internal_Template $_smarty_tpl)
 <div class="row">
         <div class="col-md-12">
                 <header>
-                        <h1>タイトル</h1>
+                        <h1>スポッツ!</h1>
                         <p id="login_status"><?php echo $_smarty_tpl->tpl_vars['login_status']->value;?>
 </p>
                 </header><!-- /header -->

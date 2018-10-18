@@ -88,7 +88,7 @@ function map_id_set(n){
     var map_pos = "#spot" + "_" + n;
     $('#map_detail').insertAfter(map_pos);
     marker_detail.setMap(null);
-    var mapLatLng = new google.maps.LatLng({lat: markerData[n-1]['lat'], lng: markerData[n-1]['lng']});
+    var mapLatLng = new google.maps.LatLng({lat: markerData[n]['lat'], lng: markerData[n]['lng']});
     marker_detail = new google.maps.Marker({ // マーカーの追加
         position: mapLatLng, // マーカーを立てる位置を指定
       map: map_detail 

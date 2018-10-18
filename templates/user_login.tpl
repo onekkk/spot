@@ -11,21 +11,21 @@
 <div class="row">
         <div class="col-md-12">
                 <header>
-                        <h1>スポッツ!</h1>
-			<p id="login_status">{$login_status}</p>
+                    <h1>スポッツ!</h1>
+					<p id="login_status">{$login_status}</p>
                 </header><!-- /header -->
         </div>
 </div>
 <div class="row">
         <div class="col-md-2">
                 <nav class="nav flex-column">
-                        <a class="nav-link active" href="index.php">ホーム</a>
+                    <a class="nav-link active" href="index.php">ホーム</a>
                 	{foreach from=$list_text item=li}
-                                <a class="nav-link" href="{$li["link"]}">{$li["text"]}</a>
-                        {/foreach}
-                        <a class="nav-link" href="{$login_list['link']}">{$login_list['text']}</a>
+                    	<a class="nav-link" href="{$li["link"]}">{$li["text"]}</a>
+                    {/foreach}
+                    <a class="nav-link" href="{$login_list['link']}">{$login_list['text']}</a>
 
-		</nav>
+				</nav>
         </div>
         <div class="col-md-10">
                 <div class="row">
@@ -34,21 +34,21 @@
                                         <h2>ユーザーログイン</h2>
                                         {$error_message}
                                         <div class="form-group row">
-                                                <label for="name" class="col-sm-2 col-form-label">ユーザー名</label>
-                                                <div class="col-sm-10">
-                                                        <input type="text" class="form-control" name="username"id="name" pattern="^[0-9A-Za-z]+$" placeholder="ユーザー名" value="{$username}">
-                                                </div>
+                                        	<label for="name" class="col-sm-2 col-form-label">ユーザー名</label>
+                                            <div class="col-sm-10">
+                                            	<input type="text" class="form-control" name="username"id="name" pattern="^[0-9A-Za-z]+$" placeholder="ユーザー名" value="{$username}">
+                                            </div>
                                         </div>
                                         <div class="form-group row">
                                                 <label for="password" class="col-sm-2 col-form-label">パスワード</label>
                                                 <div class="col-sm-10">
                                                         <input type="password" class="form-control" name="password" id="password" placeholder="パスワード" value="{$password}">
-</div>
+												</div>
                                         </div>
-					<div class="float-right">
-						<a href="user_sign_up.php" id="sign_in">新規登録</a>
+										<div class="float-right">
+											<a href="user_sign_up.php" id="sign_in">新規登録</a>
                                         	<input type="submit" class=" float-right btn btn-primary" id="login" name="login" value="ログイン">
-					</div>
+										</div>
                                         <input type="hidden" name="token" value="{$csrf_token}">
                                 </form>
                         </div>

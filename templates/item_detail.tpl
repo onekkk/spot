@@ -21,14 +21,14 @@
 		</header><!-- /header -->
 	</div>
 </div>
-<div class="row">
+<div class="row" id="container">
 	<div class="col-md-2">
 		<nav class="nav flex-column">
 		  	<a class="nav-link active" href="index.php">ホーム</a>
 			{foreach from=$list_text item=li}
-                                <a class="nav-link" href="{$li["link"]}">{$li["text"]}</a>
-                        {/foreach}
-                        <a class="nav-link" href="{$login_list['link']}">{$login_list['text']}</a>
+            	<a class="nav-link" href="{$li["link"]}">{$li["text"]}</a>
+            {/foreach}
+            <a class="nav-link" href="{$login_list['link']}">{$login_list['text']}</a>
 		</nav>
 	</div>
 	<div class="col-md-10">
@@ -38,42 +38,41 @@
 
 				<div id="content">
 					<div class="row">
-                                                <p class="col-md-4">アイテムの作成者：</p>
-                                                	<a href="user_detail.php?user={$result2['author']}" class="col-md-8  description">{$result2['author']}</a>
+                    	<p class="col-md-4">アイテムの作成者：</p>
+                        <a href="user_detail.php?user={$result2['author']}" class="col-md-8  description">{$result2['author']}</a>
 					</div>
 					<div class="row">
-					    	<p class="col-md-4">アイテムの名前：</p>
-					    	<p class="col-md-8  description">{$result2['name']} {$bookmark_text}</p>
-					    </div>
+					    <p class="col-md-4">アイテムの名前：</p>
+					    <p class="col-md-8  description">{$result2['name']} {$bookmark_text}</p>
+					</div>
 					    
-					    <div class="row">
-					    	<p class="col-md-4">アイテムの説明：</p>
-					    	<p class="col-md-8  description">{$result2['body']}</p>
-					    </div>
+					<div class="row">
+					    <p class="col-md-4">アイテムの説明：</p>
+					    <p class="col-md-8  description">{$result2['body']}</p>
+					</div>
 					<div id="map" style="width:450px; height:320px;"></div>
 	
-		{section name=i start=0 loop=$result1}
-			<div class="spot" id="spot_{$smarty.section.i.index}">
-                                            <div class="row">
-                                                <p class="col-md-4">おすすめスポットの名前：</p>
-                                                <p class="col-md-8  description">{$result1[$smarty.section.i.index]['name']}</p>
-                                            </div>
-                                            <div class="row">
-                                                <p class="col-md-4">おすすめスポットの説明：</p>
-                                                <p class="col-md-8  description">{$result1[$smarty.section.i.index]['body']}</p>
-                                            </div>
-                                            <input type="button" value="地図を表示" class="btn btn-outline-info" onclick="map_id_set({$smarty.section.i.index});">
-			{if $smarty.section.i.index == 0}
-				<div id="map_detail" style="width:450px; height:320px;"></div>
-			{/if}
-			
-			</div>
+					{section name=i start=0 loop=$result1}
+						<div class="spot" id="spot_{$smarty.section.i.index}">
+                    		<div class="row">
+                    	    	<p class="col-md-4">おすすめスポットの名前：</p>
+                    	        <p class="col-md-8  description">{$result1[$smarty.section.i.index]['name']}</p>
+                    	    </div>
+                    	    <div class="row">
+                    	    	<p class="col-md-4">おすすめスポットの説明：</p>
+                    	        <p class="col-md-8  description">{$result1[$smarty.section.i.index]['body']}</p>
+                   	     	</div>
+                   	     	<input type="button" value="地図を表示" class="btn btn-outline-info" onclick="map_id_set({$smarty.section.i.index});">
+							{if $smarty.section.i.index == 0}
+								<div id="map_detail" style="width:450px; height:320px;"></div>
+							{/if}
+						</div>
 		
-		{/section}
+					{/section}
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
 {literal}
 <script>

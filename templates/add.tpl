@@ -140,16 +140,16 @@ if(total_count >= 4){
 		var google_map_lat = 'google_map_lat_' + i;
 		var google_map_lng = 'google_map_lng_' + i;
 		
-        	var spot_hidden = document.getElementById('spot_hidden_' + i).value;
-        	spot_hidden = spot_hidden.split(',');
-        	document.getElementById('spot_name_' + i).value = spot_hidden[0];
-        	document.getElementById('spot_body_' + i).value = spot_hidden[1];
+       	var spot_hidden = document.getElementById('spot_hidden_' + i).value;
+        spot_hidden = spot_hidden.split(',');
+        document.getElementById('spot_name_' + i).value = spot_hidden[0];
+        document.getElementById('spot_body_' + i).value = spot_hidden[1];
 		if(!isNaN(parseFloat(spot_hidden[2]))){
 			document.getElementById('google_map_lat_' + i).value = parseFloat(spot_hidden[2]);
 		}
 		if(!isNaN(parseFloat(spot_hidden[3]))){
-                        document.getElementById('google_map_lng_' + i).value = parseFloat(spot_hidden[3]);
-                }
+        	document.getElementById('google_map_lng_' + i).value = parseFloat(spot_hidden[3]);
+        }
 	
 	}
 

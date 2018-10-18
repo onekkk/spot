@@ -37,27 +37,27 @@
 			</form>
 			{foreach from=$result item=item}
 				<div class="item">
-                                        <a href="item_detail.php?id={$item['id']}" title="" >
-                                                <h3>{$item['name']}</h3>
-                                                <p class="item_body">{$item['body']}</p>
-                                                <p class="author">作成者　{$item['author']}</p>
-                                        </a>
-                        	</div>
+                	<a href="item_detail.php?id={$item['id']}" title="" >
+                    	<h3>{$item['name']}</h3>
+                    	<p class="item_body">{$item['body']}</p>
+                    	<p class="author">作成者　{$item['author']}</p>
+                    </a>
+				</div>
 			{/foreach}
 		
 		<div class="col-md-12" id="page">
 			<div class="row">
-			<p class="col-md-4">
-				{if $page > 1}
+				<p class="col-md-4">
+					{if $page > 1}
       					<a href="?page={($page - 1)}">前のページへ</a>
     				{/if}
-			</p>
-			<p class="col-md-4">{$page} ページ目</p>
-			<p class="col-md-4">
-				{if $page < $total_page}
+				</p>
+				<p class="col-md-4">{$page} ページ目</p>
+				<p class="col-md-4">
+					{if $page < $total_page}
     　　				<a href="?page={($page + 1)}">次のページへ</a>
     				{/if}
-			</p>
+				</p>
 			</div>
 		</div>
 	</div>

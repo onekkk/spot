@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-10-09 08:55:54
+/* Smarty version 3.1.32, created on 2018-10-18 16:37:21
   from '/var/www/html/items_s/templates/item_detail.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bbbee8a591a84_39669428',
+  'unifunc' => 'content_5bc838312c1a24_18075270',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e94e2f12d68e954b2fda4c03ba69f148fa7b8467' => 
     array (
       0 => '/var/www/html/items_s/templates/item_detail.tpl',
-      1 => 1539014472,
+      1 => 1539848231,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bbbee8a591a84_39669428 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bc838312c1a24_18075270 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE>
 
 <html>
@@ -52,7 +52,7 @@ function content_5bbbee8a591a84_39669428 (Smarty_Internal_Template $_smarty_tpl)
 		</header><!-- /header -->
 	</div>
 </div>
-<div class="row">
+<div class="row" id="container">
 	<div class="col-md-2">
 		<nav class="nav flex-column">
 		  	<a class="nav-link active" href="index.php">ホーム</a>
@@ -61,14 +61,14 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['li']->value) {
 ?>
-                                <a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['li']->value["link"];?>
+            	<a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['li']->value["link"];?>
 "><?php echo $_smarty_tpl->tpl_vars['li']->value["text"];?>
 </a>
-                        <?php
+            <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-                        <a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['login_list']->value['link'];?>
+            <a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['login_list']->value['link'];?>
 "><?php echo $_smarty_tpl->tpl_vars['login_list']->value['text'];?>
 </a>
 		</nav>
@@ -80,8 +80,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 				<div id="content">
 					<div class="row">
-                                                <p class="col-md-4">アイテムの作成者：</p>
-                                                	<a href="user_detail.php?user=<?php echo $_smarty_tpl->tpl_vars['result2']->value['author'];?>
+                    	<p class="col-md-4">アイテムの作成者：</p>
+                        <a href="user_detail.php?user=<?php echo $_smarty_tpl->tpl_vars['result2']->value['author'];?>
 " class="col-md-8  description"><?php echo $_smarty_tpl->tpl_vars['result2']->value['author'];?>
 </a>
 					</div>
@@ -99,7 +99,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 					    </div>
 					<div id="map" style="width:450px; height:320px;"></div>
 	
-		<?php
+					<?php
 $__section_i_0_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['result1']->value) ? count($_loop) : max(0, (int) $_loop));
 $__section_i_0_start = min(0, $__section_i_0_loop);
 $__section_i_0_total = min(($__section_i_0_loop - $__section_i_0_start), $__section_i_0_loop);
@@ -107,34 +107,34 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = new Smarty_Variable(array());
 if ($__section_i_0_total !== 0) {
 for ($__section_i_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] = $__section_i_0_start; $__section_i_0_iteration <= $__section_i_0_total; $__section_i_0_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']++){
 ?>
-			<div class="spot" id="spot_<?php echo (isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null);?>
+						<div class="spot" id="spot_<?php echo (isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null);?>
 ">
-                                            <div class="row">
-                                                <p class="col-md-4">おすすめスポットの名前：</p>
-                                                <p class="col-md-8  description"><?php echo $_smarty_tpl->tpl_vars['result1']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['name'];?>
+                    		<div class="row">
+                    	    	<p class="col-md-4">おすすめスポットの名前：</p>
+                    	        <p class="col-md-8  description"><?php echo $_smarty_tpl->tpl_vars['result1']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['name'];?>
 </p>
-                                            </div>
-                                            <div class="row">
-                                                <p class="col-md-4">おすすめスポットの説明：</p>
-                                                <p class="col-md-8  description"><?php echo $_smarty_tpl->tpl_vars['result1']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['body'];?>
+                    	    </div>
+                    	    <div class="row">
+                    	    	<p class="col-md-4">おすすめスポットの説明：</p>
+                    	        <p class="col-md-8  description"><?php echo $_smarty_tpl->tpl_vars['result1']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['body'];?>
 </p>
-                                            </div>
-                                            <input type="button" value="地図を表示" class="btn btn-outline-info" onclick="map_id_set(<?php echo (isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null);?>
+                   	     </div>
+                   	     <input type="button" value="地図を表示" class="btn btn-outline-info" onclick="map_id_set(<?php echo (isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null);?>
 );">
-			<?php if ((isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null) == 0) {?>
-				<div id="map_detail" style="width:450px; height:320px;"></div>
-			<?php }?>
+						<?php if ((isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null) == 0) {?>
+							<div id="map_detail" style="width:450px; height:320px;"></div>
+						<?php }?>
 			
-			</div>
+						</div>
 		
-		<?php
+					<?php
 }
 }
 ?>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
 
 <?php echo '<script'; ?>
