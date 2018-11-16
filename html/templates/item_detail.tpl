@@ -50,6 +50,10 @@
 					    <p class="col-md-4">アイテムの説明：</p>
 					    <p class="col-md-8  description">{$result2['body']}</p>
 					</div>
+                    <div class="row">
+                        <p class="col-md-4">アイテムの写真：</p>
+                        <img src="{$result2['img_path']}" alt="">
+                    </div>
 					<div id="map" style="width:450px; height:320px;"></div>
 	
 					{section name=i start=0 loop=$result1}
@@ -62,6 +66,12 @@
                     	    	<p class="col-md-4">おすすめスポットの説明：</p>
                     	        <p class="col-md-8  description">{$result1[$smarty.section.i.index]['body']}</p>
                    	     	</div>
+                            {if $result1[$smarty.section.i.index]['img_path'] != ""}
+                                <div class="row">
+                                    <p class="col-md-4">アイテムの写真：</p>
+                                    <img src="{$result1[$smarty.section.i.index]['img_path']}" alt="">
+                                </div>
+                            {/if}
                    	     	<input type="button" value="地図を表示" class="btn btn-outline-info" onclick="map_id_set({$smarty.section.i.index});">
 							{if $smarty.section.i.index == 0}
 								<div id="map_detail" style="width:450px; height:320px;"></div>

@@ -38,8 +38,8 @@
 			{foreach from=$result item=item}
 				<div class="item">
                 	<a href="item_detail.php?id={$item['id']}" title="" >
+                		<img src="{$item['img_path']}" alt="">
                     	<h3>{$item['name']}</h3>
-                    	<p class="item_body">{$item['body']}</p>
                     	<p class="author">作成者　{$item['author']}</p>
                     </a>
 				</div>

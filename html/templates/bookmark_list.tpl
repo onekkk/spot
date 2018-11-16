@@ -10,37 +10,37 @@
 
 <body>
 <div class="row">
-        <div class="col-md-12">
-                <header>
-                        <h1>スポッツ!</h1>
-                        <p id="login_status">{$login_status}</p>
-                </header><!-- /header -->
-        </div>
+    <div class="col-md-12">
+        <header>
+            <h1>スポッツ!</h1>
+            <p id="login_status">{$login_status}</p>
+        </header><!-- /header -->
+    </div>
 </div>
 <div class="row" id="container">
-        <div class="col-md-2">
-                <nav class="nav flex-column">
-                    <a class="nav-link active" href="index.php">ホーム</a>
-                	{foreach from=$list_text item=li}
-                    	<a class="nav-link" href="{$li["link"]}">{$li["text"]}</a>
-                    {/foreach}
-                    <a class="nav-link" href="{$login_list['link']}">{$login_list['text']}</a>
+    <div class="col-md-2">
+        <nav class="nav flex-column">
+            <a class="nav-link active" href="index.php">ホーム</a>
+            {foreach from=$list_text item=li}
+                <a class="nav-link" href="{$li["link"]}">{$li["text"]}</a>
+            {/foreach}
+            <a class="nav-link" href="{$login_list['link']}">{$login_list['text']}</a>
 		</nav>
-        </div>
-        <div class="col-md-10">
-                <div class="row">
-                        <div class="col-md-12">
-                                <h2 class="col-md-12" id="user_info">お気に入り一覧</h2>
-                        </div>
-		{foreach from=$spots item=item}
-                                <div class="item">
-                                        <a href="item_detail.php?id={$item['id']}" title="" >
-                                                <h3>{$item['name']}</h3>
-                                                <p class="item_body">{$item['body']}</p>
-                                                <p class="author">作成者　{$item['author']}</p>
-                                        </a>
-                                </div>
-                 {/foreach}
+    </div>
+    <div class="col-md-10">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="col-md-12" id="user_info">お気に入り一覧</h2>
+            </div>
+		    {foreach from=$result item=item}
+                <div class="item">
+                    <a href="item_detail.php?id={$item['id']}" title="" >
+                        <img src="{$item['img_path']}" alt="">
+                        <h3>{$item['name']}</h3>
+                        <p class="author">作成者　{$item['author']}</p>
+                    </a>
+                </div>
+            {/foreach}
 
         </div>
 </div>

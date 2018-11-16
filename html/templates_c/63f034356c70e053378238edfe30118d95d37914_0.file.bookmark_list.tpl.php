@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-06 05:01:38
+/* Smarty version 3.1.32, created on 2018-11-16 05:40:51
   from '/var/www/html/templates/bookmark_list.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5be1203269ce00_99990141',
+  'unifunc' => 'content_5bee58632d7f98_31417690',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '63f034356c70e053378238edfe30118d95d37914' => 
     array (
       0 => '/var/www/html/templates/bookmark_list.tpl',
-      1 => 1539864022,
+      1 => 1542346786,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5be1203269ce00_99990141 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bee58632d7f98_31417690 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE>
 
 <html>
@@ -35,57 +35,57 @@ function content_5be1203269ce00_99990141 (Smarty_Internal_Template $_smarty_tpl)
 
 <body>
 <div class="row">
-        <div class="col-md-12">
-                <header>
-                        <h1>スポッツ!</h1>
-                        <p id="login_status"><?php echo $_smarty_tpl->tpl_vars['login_status']->value;?>
+    <div class="col-md-12">
+        <header>
+            <h1>スポッツ!</h1>
+            <p id="login_status"><?php echo $_smarty_tpl->tpl_vars['login_status']->value;?>
 </p>
-                </header><!-- /header -->
-        </div>
+        </header><!-- /header -->
+    </div>
 </div>
 <div class="row" id="container">
-        <div class="col-md-2">
-                <nav class="nav flex-column">
-                    <a class="nav-link active" href="index.php">ホーム</a>
-                	<?php
+    <div class="col-md-2">
+        <nav class="nav flex-column">
+            <a class="nav-link active" href="index.php">ホーム</a>
+            <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['list_text']->value, 'li');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['li']->value) {
 ?>
-                    	<a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['li']->value["link"];?>
+                <a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['li']->value["link"];?>
 "><?php echo $_smarty_tpl->tpl_vars['li']->value["text"];?>
 </a>
-                    <?php
+            <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-                    <a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['login_list']->value['link'];?>
+            <a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['login_list']->value['link'];?>
 "><?php echo $_smarty_tpl->tpl_vars['login_list']->value['text'];?>
 </a>
 		</nav>
-        </div>
-        <div class="col-md-10">
-                <div class="row">
-                        <div class="col-md-12">
-                                <h2 class="col-md-12" id="user_info">お気に入り一覧</h2>
-                        </div>
-		<?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['spots']->value, 'item');
+    </div>
+    <div class="col-md-10">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="col-md-12" id="user_info">お気に入り一覧</h2>
+            </div>
+		    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['result']->value, 'item');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 ?>
-                                <div class="item">
-                                        <a href="item_detail.php?id=<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+                <div class="item">
+                    <a href="item_detail.php?id=<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 " title="" >
-                                                <h3><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+                        <img src="<?php echo $_smarty_tpl->tpl_vars['item']->value['img_path'];?>
+" alt="">
+                        <h3><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
 </h3>
-                                                <p class="item_body"><?php echo $_smarty_tpl->tpl_vars['item']->value['body'];?>
+                        <p class="author">作成者　<?php echo $_smarty_tpl->tpl_vars['item']->value['author'];?>
 </p>
-                                                <p class="author">作成者　<?php echo $_smarty_tpl->tpl_vars['item']->value['author'];?>
-</p>
-                                        </a>
-                                </div>
-                 <?php
+                    </a>
+                </div>
+            <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>

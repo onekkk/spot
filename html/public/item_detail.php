@@ -76,6 +76,15 @@
  			},";
 	}
 	$str .= "]";
+	// $str = array();
+	// foreach ($result1 as $line) {
+	// 	$str[] = array(
+	// 			"name" => $line['name'],
+	// 			'lat' => $line['lat'],
+	// 			'lng' => $line['lng'],
+	// 		);
+	// }
+	// $str = json_encode($str);
 	$smarty_obj->assign("str", $str);
 	//アイテムの情報取得
 	$sql = 'SELECT * FROM spot_items WHERE id= ' . $id . ';';

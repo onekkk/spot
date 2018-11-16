@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-06 05:50:01
+/* Smarty version 3.1.32, created on 2018-11-16 11:43:26
   from '/var/www/html/templates/user_detail.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5be12b891798a0_24613835',
+  'unifunc' => 'content_5beead5e961dc9_63548696',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b20a8c10224d5ec87ac148cc136d0380fedfdccb' => 
     array (
       0 => '/var/www/html/templates/user_detail.tpl',
-      1 => 1541482483,
+      1 => 1542368579,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5be12b891798a0_24613835 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5beead5e961dc9_63548696 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE>
 
 <html>
@@ -74,6 +74,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 						<p class="col-md-7" description><?php echo $_smarty_tpl->tpl_vars['user_name']->value;?>
  <?php echo $_smarty_tpl->tpl_vars['follow_text']->value;?>
 </p>
+                        <a href="user_detail_edit.php" id="user_settings">ユーザーの設定</a>
 						<!--
 						<p class="col-md-5 body_left">ユーザーの紹介文：</p>
                         <p class="col-md-7" description><?php echo $_smarty_tpl->tpl_vars['user_body']->value;?>
@@ -89,13 +90,13 @@ if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 ?>
         		<div class="item">
-                	<a href="item_detail.php?id=<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+                    <a href="item_detail.php?id=<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 " title="" >
-                    	<h3><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+                        <img src="<?php echo $_smarty_tpl->tpl_vars['item']->value['img_path'];?>
+" alt="">
+                        <h3><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
 </h3>
-                        <p class="item_body"><?php echo $_smarty_tpl->tpl_vars['item']->value['body'];?>
-</p>
-                       	<p class="author">作成者　<?php echo $_smarty_tpl->tpl_vars['item']->value['author'];?>
+                        <p class="author">作成者　<?php echo $_smarty_tpl->tpl_vars['item']->value['author'];?>
 </p>
                     </a>
                 </div>

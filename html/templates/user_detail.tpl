@@ -35,6 +35,7 @@
 					<div class="row" id="info_body">
 						<p class="col-md-5 body_left">    ユーザー名：</p>
 						<p class="col-md-7" description>{$user_name} {$follow_text}</p>
+                        <a href="user_detail_edit.php" id="user_settings">ユーザーの設定</a>
 						<!--
 						<p class="col-md-5 body_left">ユーザーの紹介文：</p>
                         <p class="col-md-7" description>{$user_body}</p>
@@ -45,10 +46,10 @@
 			</div>
 			{foreach from=$result item=item}
         		<div class="item">
-                	<a href="item_detail.php?id={$item['id']}" title="" >
-                    	<h3>{$item['name']}</h3>
-                        <p class="item_body">{$item['body']}</p>
-                       	<p class="author">作成者　{$item['author']}</p>
+                    <a href="item_detail.php?id={$item['id']}" title="" >
+                        <img src="{$item['img_path']}" alt="">
+                        <h3>{$item['name']}</h3>
+                        <p class="author">作成者　{$item['author']}</p>
                     </a>
                 </div>
 			{/foreach}

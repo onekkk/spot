@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-06 05:01:41
+/* Smarty version 3.1.32, created on 2018-11-16 04:56:42
   from '/var/www/html/templates/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5be12035978911_73875491',
+  'unifunc' => 'content_5bee4e0abc19e4_28951142',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ac0d80c9f5195a4b1349fd7984fb80fa80c14534' => 
     array (
       0 => '/var/www/html/templates/index.tpl',
-      1 => 1539864022,
+      1 => 1542344198,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5be12035978911_73875491 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bee4e0abc19e4_28951142 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE>
 
 <html>
@@ -79,10 +79,10 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 				<div class="item">
                 	<a href="item_detail.php?id=<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 " title="" >
+                		<img src="<?php echo $_smarty_tpl->tpl_vars['item']->value['img_path'];?>
+" alt="">
                     	<h3><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
 </h3>
-                    	<p class="item_body"><?php echo $_smarty_tpl->tpl_vars['item']->value['body'];?>
-</p>
                     	<p class="author">作成者　<?php echo $_smarty_tpl->tpl_vars['item']->value['author'];?>
 </p>
                     </a>

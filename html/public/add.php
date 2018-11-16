@@ -179,7 +179,7 @@ $login_list = "";
 				$result = -1;
 			}
 			$extension=img_type('item_img'); //画像の拡張子を調べる関数
-			$file_name = "img/spot_items/" . ((int)$result[0] + 1) . $extension;
+			$file_name = "../img/spot_items/" . ((int)$result[0] + 1) . $extension;
 			move_uploaded_file($_FILES['item_img']['tmp_name'], $file_name);
 			$sth = $dbh->prepare('INSERT INTO spot_items(author, name, body, post_date, img_path) VALUES(?, ?, ?, ?, ?);');
 			$sth->execute(array($author, $item['name'], $item['body'], $time, $file_name));
@@ -202,7 +202,7 @@ $login_list = "";
 						$result2 = -1;
 					}
 					$extension=img_type($spot_img_name); //画像の拡張子を調べる関数
-					$file_name = "img/items_detail/" . ((int)$result2[0] + 1) . $extension;
+					$file_name = "../img/items_detail/" . ((int)$result2[0] + 1) . $extension;
 					move_uploaded_file($_FILES[$spot_img_name]['tmp_name'], $file_name);
 	            }
 				$sth->execute(array($result[0], $spot[$i]['name'], $spot[$i]['body'], $spot[$i]['lat'], $spot[$i]['lng'], $file_name));

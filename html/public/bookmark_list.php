@@ -40,13 +40,13 @@
     	$result1 = $sth->fetch();
 		$spots[] = $result1;
 	}
-	//bodyが長文の場合の処理
-	foreach($spots as &$line){
-    	$body_str = mb_strimwidth($line['body'],0,68);
-        if(mb_strlen($body_str) > 34){
-        	$body_str .= "…";
+	//nameの表示する文字数を調整
+    foreach($result as &$line){
+        $name_str = mb_strimwidth($line['name'],0,25);
+        if(mb_strlen($name_str) > 10){
+            $name_str .= "…";
         }
-        	$line['body'] = $body_str;
+        $line['name'] = $name_str;
     }
     unset($line);
 	$smarty_obj->assign("spots", $spots);

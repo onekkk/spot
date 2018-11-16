@@ -3,6 +3,12 @@
 	width: 65%;
 }
 
+#content img{
+	width: 246px;
+	height: 164px;
+	padding-bottom: 10px;
+}
+
 h2{
 	text-align: center;
 	background: #3cb37a;

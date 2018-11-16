@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-06 05:08:25
+/* Smarty version 3.1.32, created on 2018-11-16 06:18:17
   from '/var/www/html/templates/item_detail.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5be121c9052266_95514289',
+  'unifunc' => 'content_5bee612a0347a8_44780283',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'abad00ead596b7ebfb0075a4ac9b564d6fccfd48' => 
     array (
       0 => '/var/www/html/templates/item_detail.tpl',
-      1 => 1541480892,
+      1 => 1542349079,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5be121c9052266_95514289 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bee612a0347a8_44780283 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE>
 
 <html>
@@ -97,6 +97,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 					    <p class="col-md-8  description"><?php echo $_smarty_tpl->tpl_vars['result2']->value['body'];?>
 </p>
 					</div>
+                    <div class="row">
+                        <p class="col-md-4">アイテムの写真：</p>
+                        <img src="<?php echo $_smarty_tpl->tpl_vars['result2']->value['img_path'];?>
+" alt="">
+                    </div>
 					<div id="map" style="width:450px; height:320px;"></div>
 	
 					<?php
@@ -119,6 +124,13 @@ for ($__section_i_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
                     	        <p class="col-md-8  description"><?php echo $_smarty_tpl->tpl_vars['result1']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['body'];?>
 </p>
                    	     	</div>
+                            <?php if ($_smarty_tpl->tpl_vars['result1']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['img_path'] != '') {?>
+                                <div class="row">
+                                    <p class="col-md-4">アイテムの写真：</p>
+                                    <img src="<?php echo $_smarty_tpl->tpl_vars['result1']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['img_path'];?>
+" alt="">
+                                </div>
+                            <?php }?>
                    	     	<input type="button" value="地図を表示" class="btn btn-outline-info" onclick="map_id_set(<?php echo (isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null);?>
 );">
 							<?php if ((isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null) == 0) {?>
