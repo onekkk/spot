@@ -1,0 +1,46 @@
+header{
+	padding-bottom: 10px;
+}
+
+form{
+	margin: 30px auto;
+    width: 75%;
+	padding: 55px 55px 20px 55px;
+	border: solid 1px #a9a9a9;
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+h2{
+	padding-bottom: 40px;
+	text-align: center;
+	font-weight: bold;
+    font-size: 35px;
+    color:#163B5B;
+}
+
+#sign_up{
+	margin-right: 10px;
+	margin-top: 5px;
+}
+
+#submit_bt{
+	margin: 20px 0 0 200px;
+	padding: 8px 0; 
+	width: 120px;
+	background-color: #1C881A;
+	border-color: #1C881A;
+}
+
+.help-block{
+	color: #721c24;
+	display: inline-block;
+    margin: 4px;
+}
+
+@media screen and (max-width:990px) { 
+
+    header h1 img {
+        width: 160%;
+        position: static;
+    }
+}

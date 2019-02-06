@@ -1,0 +1,23 @@
+header{
+	padding-bottom: 10px;
+}
+h2{
+	text-align:center;
+	color: #163B5B;
+	padding: 20px 0;
+}
+
+.follow_item{
+	border-top:  solid 1px #163B5B;
+	padding: 10px 0;
+}
+
+.follow_wrap{
+	width: 20%;
+	margin: 0 auto;
+}
+
+.follow_item input{
+	margin-left: 10px;
+}
+

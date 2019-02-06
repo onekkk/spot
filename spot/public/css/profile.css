@@ -1,0 +1,83 @@
+header{
+  padding-bottom: 10px;
+}
+
+#user_info{
+	margin-bottom: 50px;
+	
+}
+
+#user_info_img{
+  display: inline-block;
+  width: 135px;
+  height: 135px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+#user_info_img img{
+  position: absolute;
+  top: -100%;
+  bottom: -100%;
+  right: -21%;
+  margin: auto;
+  width: 190px;
+}
+
+#user_info_unknown_img{
+  display: inline-block;
+  width: 135px;
+  height: 135px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+#user_info_unknown_img img{
+  position: absolute;
+  top: -100%;
+  bottom: -100%;
+  margin: auto;
+  width: 130px;
+}
+
+#user_name{
+	padding-top: 20px;
+	font-size: 30px;
+}
+
+
+#user_setting_bt{
+	background-color: #165B3D;
+	border-color: #165B3D;
+	padding: 9px 55px;
+	margin-top: 10px;
+}
+
+#spot_title{
+	color: #163B5B;
+	font-weight: bold;
+	font-size: 30px;
+	padding-bottom: 10px;
+	padding-left: 60px;
+    line-height: 50px;
+    background-image: url("../img/spot_icon.png");
+    background-repeat: no-repeat;
+}
+
+.body_left{
+	text-align: right;
+}
+
+#follow_btn{
+	margin-left: 20px;
+}
+
+
+@media screen and (max-width:990px) { 
+  #user_info_right{
+    padding-left: 4em;
+  }
+
+}
