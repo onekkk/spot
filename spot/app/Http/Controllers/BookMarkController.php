@@ -35,7 +35,7 @@ class BookMarkController extends Controller
 
     	if($req['bookmark_is'] == "true"){
             //delete
-            $del = Bookmark::where('user', $req['user'])->orwhere('item_id', $req['item_id'])->delete();
+            $del = Bookmark::where('user', $req['user'])->where('item_id', $req['item_id'])->delete();
     	}else{
             //insert
             Bookmark::create([

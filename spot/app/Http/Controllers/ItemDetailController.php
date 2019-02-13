@@ -23,6 +23,7 @@ class ItemDetailController extends Controller
     	$auth = Auth::user(); //認証情報を取得
     	$bookmark_is = Bookmark::query()->where('user', $auth['id'])->where('item_id', $spot_id)->count();
 
+
     	return view('item_detail', ['is_auth' => Auth::check(), 'auth_id' => $auth['id'], 'user_name' => $auth['name'], 'bookmark_is' => $bookmark_is, 'item' => $item, 'spots' => $spots]);
     }
 }

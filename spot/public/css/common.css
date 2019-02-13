@@ -32,6 +32,7 @@ nav{
 .container{
 	max-width: 100%;
 	padding: 0;
+	width: auto;
 }
 
 header h1{
@@ -149,7 +150,8 @@ header .container{
 }
 
 .item{
-	height: 230px;
+	/*height: 230px;*/
+	/*height: 300px;*/
 	margin: 0 0 10px 21px;
 	padding: 0;
 	position:relative;
@@ -158,7 +160,7 @@ header .container{
 }
 .item a{
 	display: block;
-	height: 100%;
+	/*height: 100%;*/
 	
 }
 /*.item a:hover{
@@ -168,8 +170,10 @@ header .container{
 }*/
 .item img{
 	width: 100%;
-	height: 192px;
+	/*height: 192px;*/
+	height: 250px;
 	border-radius: 3px 3px 0 0;
+	object-fit:cover;
 }
 .item h3{
 	padding: 7px 0 10px 7px;
@@ -302,6 +306,7 @@ input:-ms-input-placeholder {
 
 @media screen and (max-width:990px) { 
 
+
 	header h1{
 		width: 10%;
 		margin: 10px 0 10px 10px;
@@ -319,8 +324,7 @@ input:-ms-input-placeholder {
 	}
 
 	nav{
-		padding: 10px 10px 10px 10px;
-		/*margin: 10px 10px 10px 10px;*/
+		padding: 10px 10px 10 10px;
 	}
 
 	header ul{
@@ -331,8 +335,7 @@ input:-ms-input-placeholder {
 	header nav a:hover{
 		color: #fff;
 	}
-
-
+	
 	#mobile_nav{
 		display: block;
 		background-color: #163B5B;
@@ -394,4 +397,3 @@ input:-ms-input-placeholder {
 		width: 70%;
 	}
 }
-

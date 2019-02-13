@@ -36,7 +36,7 @@ class FollowController extends Controller
 
     	if($req['follow_is'] == "true"){
             //delete
-            $del = Follow::where('follow', $req['follow'])->orwhere('follower', $req['follower'])->delete();
+            $del = Follow::where('follow', $req['follow'])->where('follower', $req['follower'])->delete();
     	}else{
             //insert
             Follow::create([

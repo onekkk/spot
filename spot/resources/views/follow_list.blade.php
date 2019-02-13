@@ -19,7 +19,7 @@
         @foreach ($follows as $follow)
             <div class="col-md-12 follow_item">
                 <div class="follow_wrap">
-                    <a href="/user_detail?author={{$follow->follower}}" class=" description">{{$follow->name}}</a>
+                    <a href="./user_detail?author={{$follow->follower}}" class=" description">{{$follow->name}}</a>
                     <input type="button" class="btn btn-outline-primary" id="f_{{$loop->index}}" value="フォローをはずす" onClick="follow_click({{$follow->follower}}, {{$loop->index}});">
                     <input type="hidden" value="true" id="b_{{$loop->index}}">
                 </div>
